@@ -30,11 +30,8 @@
                 <li><a href="#">Eventos</a></li>
                 <li><a href="#">Noticias</a></li>
                 <li id="language-site"><span>pt-br</span></li>
-                <div class="nav-icon1">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                <img class="nav-icon" src="../imagens/togle-menu.png" alt="" srcset="">
+            
             </ul>
         </div>
     </header>
@@ -135,12 +132,18 @@
         </div>
     </footer>
 
-    <nav>
-        <div class="nav-icon1">
-            <span></span>
-            <span></span>
-            <span></span>
+    <nav id="menu-mobile">
+        <div class="menu-toggle-mobile">
+            <img class="nav-icon" src="../imagens/togle-menu.png" alt="" srcset="">   
         </div>
+        <ul class="menu-mobile-itens">
+            <li><a href="#">Quemsomosfdsfds</a></li>
+            <li><a href="#">Metodologia</a></li>
+            <li><a href="#">Publicações</a></li>
+            <li><a href="#">Eventos</a></li>
+            <li><a href="#">Noticias</a></li>
+            
+        </ul>
     </nav>
 
 </body>
@@ -148,9 +151,10 @@
 
     document.addEventListener("DOMContentLoaded", function () {
        
-        let meuBotao = document.getElementsByClassName("nav-icon1")[0];
+        let meuBotao = document.getElementsByClassName("nav-icon")[0];
         let menuNav = document.getElementsByTagName("nav")[0];
-        console.log(menuNav)
+        console.log(meuBotao)
+    
         meuBotao.addEventListener("click", function () {
             this.classList.toggle("open");
             if(this.classList.contains("open")){
